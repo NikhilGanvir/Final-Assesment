@@ -1,0 +1,39 @@
+
+<template>
+    <lightning-card title="Related">
+        <div class="slds-m-around_medium">
+            <lightning-combobox
+            label="Related"
+            placeholder="select"
+            value={selectedValue}
+            options={option}
+            onchange={handleChange}></lightning-combobox>
+
+            <template if:true={getContact}>
+                <lightning-datatable
+                key-field="id"
+                data={contactData}
+                columns={contactCol}>
+               </lightning-datatable>
+            </template>
+
+            <template if:true={getOpp}>
+                <lightning-datatable
+                key-field="id"
+                data={oppData}
+                columns={opportunityCol}>
+               </lightning-datatable>
+            </template>
+
+            <template if:true={getCase}>
+                <lightning-datatable
+                key-field="id"
+                data={caseData}
+                columns={casesCol}>
+               </lightning-datatable>
+            </template>
+
+
+        </div>
+    </lightning-card>
+</template>
