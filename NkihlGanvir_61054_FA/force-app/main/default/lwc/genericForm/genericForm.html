@@ -1,7 +1,10 @@
+<!-- sldsValidatorIgnore -->
+<!-- sldsValidatorIgnore -->
 <template>
     <lightning-card title={Obname}>
             <div class="slds-m-around_medium">
                 <template if:true={flag}>
+                
                     <template for:each={contactRecord} for:item="rec">
                         <p key={rec.fields.Id.value}>
                             {rec.fields.Name.value}
